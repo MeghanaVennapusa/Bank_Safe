@@ -11,13 +11,13 @@ public class Transactions {
     private Date transactionDate;
     public Transactions() {
     }
-    public Transactions(int transactionId, int accountId, double amount, String transactionType, Date transactionDate) {
+    public Transactions(int transactionId, int accountId, double amount, Date transactionDate, String transactionType) {
         this.transactionId = transactionId;
         this.accountId = accountId;
         this.amount = amount;
-        this.transactionType = transactionType;
         this.transactionDate = transactionDate;
-    }
+        this.transactionType = transactionType;
+    }  
     public int getTransactionId() {
         return transactionId;
     }

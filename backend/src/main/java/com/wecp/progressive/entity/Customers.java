@@ -56,6 +56,7 @@ public class Customers implements Comparable<Customers>{
     public int compareTo(Customers o) {
         // TODO Auto-generated method stub
        return this.getName().compareTo(o.getName());
-    }
+    } 
+   
 }
 

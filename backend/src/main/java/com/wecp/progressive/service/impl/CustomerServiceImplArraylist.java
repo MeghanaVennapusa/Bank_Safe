@@ -10,32 +10,35 @@ import com.wecp.progressive.service.CustomerService;
 
 public class CustomerServiceImplArraylist implements CustomerService{
 
-    private static List<Customers> customerList = new ArrayList<>();
+    private static List<Customers> customersList = new ArrayList<>();
     @Override
     public int addCustomer(Customers customers) throws SQLException {
         // TODO Auto-generated method stub
-         customerList.add(customers);
-         return customerList.size();
+         customersList.add(customers);
+         return customersList.size();
     }
 
     @Override
     public void emptyArrayList() {
         // TODO Auto-generated method stub
         //CustomerService.super.emptyArrayList();
-        customerList.clear();
+        customersList=new ArrayList<>();
     }
 
     @Override
     public List<Customers> getAllCustomers() throws SQLException {
         // TODO Auto-generated method stub
-        return customerList;
+        return customersList;
     }
 
     @Override
     public List<Customers> getAllCustomersSortedByName() throws SQLException {
         // TODO Auto-generated method stub
-        Collections.sort(customerList);
-        return customerList;
+        Collections.sort(customersList);
+        List<Customers> sortedCustomers = customersList;
+        
+        Collections.sort(customersList);
+        return sortedCustomers;
     }
 }
 

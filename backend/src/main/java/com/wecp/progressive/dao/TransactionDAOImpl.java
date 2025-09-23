@@ -1,10 +1,12 @@
 package com.wecp.progressive.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.wecp.progressive.entity.Transactions;
 
 public class TransactionDAOImpl implements TransactionDAO{
+
 
     @Override
     public int addTransaction(Transactions transaction) {
@@ -21,7 +23,7 @@ public class TransactionDAOImpl implements TransactionDAO{
     @Override
     public List<Transactions> getAllTransactions() {
         // TODO Auto-generated method stub
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
@@ -35,10 +37,6 @@ public class TransactionDAOImpl implements TransactionDAO{
         // TODO Auto-generated method stub
         
     }
-
-
-
-
 
 }
 

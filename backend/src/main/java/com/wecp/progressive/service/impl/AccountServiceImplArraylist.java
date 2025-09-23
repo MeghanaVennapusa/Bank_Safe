@@ -3,6 +3,7 @@ package com.wecp.progressive.service.impl;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.wecp.progressive.entity.Accounts;
@@ -21,7 +22,7 @@ public class AccountServiceImplArraylist implements AccountService{
     public void emptyArrayList() {
         // TODO Auto-generated method stub
         //AccountService.super.emptyArrayList();
-        accountsList.clear();
+        accountsList = new ArrayList<>();
     }
 
     @Override
@@ -33,8 +34,9 @@ public class AccountServiceImplArraylist implements AccountService{
     @Override
     public List<Accounts> getAllAccountsSortedByBalance() throws SQLException {
         // TODO Auto-generated method stub
-        Collections.sort(accountsList);
-        return accountsList;
+        List<Accounts> sortedAccounts = accountsList;
+        sortedAccounts.sort(Comparator.comparingDouble(Accounts::getBalance));
+        return sortedAccounts;
     }
 }
 

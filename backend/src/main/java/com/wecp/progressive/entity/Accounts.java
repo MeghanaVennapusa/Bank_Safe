@@ -33,7 +33,8 @@ public class Accounts implements Comparable<Accounts>{
     public int compareTo(Accounts o) {
         // TODO Auto-generated method stub
         return Double.compare(this.getBalance(), o.getBalance());
-    }
+    } 
+   
     
 }
 
