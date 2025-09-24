@@ -7,29 +7,29 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
 public class CustomerController {
 
-    public ResponseEntity<List<Customers>> getAllCustomers() {
+    public List<Customers> getAllCustomers() {
         return null;
     }
 
-    public ResponseEntity<Customers> getCustomerById(int customerId) {
+    public Customers getCustomerById(int customerId) {
         return null;
     }
 
-    public ResponseEntity<Integer> addCustomer(Customers customers) {
+    public Integer addCustomer(Customers customers) {
         return null;
     }
 
-    public ResponseEntity<Void> updateCustomer(int customerId, Customers customers) {
-        return null;
+    public void updateCustomer(int customerId, Customers customers) {
+        //return null;
     }
-    public ResponseEntity<Void> deleteCustomer(int customerId) {
-        return null;
+    public void deleteCustomer(int customerId) {
+        //return null;
     }
 
-    public ResponseEntity<List<Transactions>> getAllTransactionsByCustomerId(int customerId) {
+    public List<Transactions> getAllTransactionsByCustomerId(int customerId) {
         return null;
     }
 }
