@@ -13,7 +13,7 @@ public class AccountServiceImplArraylist implements AccountService{
 
     private static List<Accounts> accountsList = new ArrayList<>();
     @Override
-    public int addAccount(Accounts accounts) throws SQLException {
+    public int addAccount(Accounts accounts) {
         // TODO Auto-generated method stub
         accountsList.add(accounts);
         return accountsList.size();
@@ -26,13 +26,13 @@ public class AccountServiceImplArraylist implements AccountService{
     }
 
     @Override
-    public List<Accounts> getAllAccounts() throws SQLException {
+    public List<Accounts> getAllAccounts()  {
         // TODO Auto-generated method stub
         return accountsList;
     }
 
     @Override
-    public List<Accounts> getAllAccountsSortedByBalance() throws SQLException {
+    public List<Accounts> getAllAccountsSortedByBalance()  {
         // TODO Auto-generated method stub
         List<Accounts> sortedAccounts = accountsList;
         sortedAccounts.sort(Comparator.comparingDouble(Accounts::getBalance));

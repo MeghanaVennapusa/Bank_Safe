@@ -1,6 +1,8 @@
 
 
 package com.wecp.progressive.entity;
+// import java.sql.Date;
+
 import java.util.Date;
 
 public class Transactions {
@@ -42,12 +44,13 @@ public class Transactions {
     public void setTransactionType(String transactionType) {
         this.transactionType = transactionType;
     }
-    public java.util.Date getTransactionDate() {
+    public Date getTransactionDate() {
         return transactionDate;
     }
     public void setTransactionDate(Date transactionDate) {
         this.transactionDate = transactionDate;
     }
+    
     
     
 

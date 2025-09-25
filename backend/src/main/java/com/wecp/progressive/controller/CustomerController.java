@@ -3,33 +3,52 @@ package com.wecp.progressive.controller;
 
 import com.wecp.progressive.entity.Customers;
 import com.wecp.progressive.entity.Transactions;
+import com.wecp.progressive.service.impl.CustomerServiceImplArraylist;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 @RestController
+@RequestMapping("/customers")
 public class CustomerController {
 
-    public List<Customers> getAllCustomers() {
-        return null;
+    @Autowired
+    private CustomerServiceImplArraylist customerServiceImplArraylist;
+    @GetMapping("")
+    public List<Customers> getAllCustomers() throws SQLException {
+        return customerServiceImplArraylist.getAllCustomers();
     }
-
-    public Customers getCustomerById(int customerId) {
-        return null;
+    @GetMapping("/{customerID}")
+    public Customers getCustomerById(@PathVariable int customerId) throws SQLException{
+        return customerServiceImplArraylist.getCustomerById(customerId);
     }
-
-    public Integer addCustomer(Customers customers) {
-        return null;
+    //@PostMapping("")
+    @ResponseStatus(HttpStatus.CREATED)
+    public int addCustomer(Customers customers) throws SQLException{
+        return 0;
+        //return customerServiceImplArraylist.addCustomer(customers);
     }
-
-    public void updateCustomer(int customerId, Customers customers) {
+    @PutMapping("/{customerID}")
+    public void updateCustomer(@PathVariable int customerId, @RequestBody Customers customers) throws SQLException{
         //return null;
+        customerServiceImplArraylist.updateCustomer(customers);
     }
-    public void deleteCustomer(int customerId) {
+    @DeleteMapping("/{customerID}")
+    public void deleteCustomer(@PathVariable int customerId) throws SQLException{
         //return null;
+        customerServiceImplArraylist.deleteCustomer(customerId);
     }
-
-    public List<Transactions> getAllTransactionsByCustomerId(int customerId) {
-        return null;
+    @GetMapping("/fromArrayList")
+    public List<Customers> getAllCustomersFromArrayList() throws SQLException{
+        return customerServiceImplArraylist.getAllCustomers();
+    }
+    @GetMapping("/fromArrayList/all")
+    public List<Customers> getAllCustomersSortedByNameFromArrayList() throws SQLException
+    {
+        return customerServiceImplArraylist.getAllCustomersSortedByName();
     }
 }
