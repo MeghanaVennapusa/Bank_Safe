@@ -1,0 +1,14 @@
+<div *ngIf="customers && customers.length > 0; else noCustomers">
+    <h2>Customer List</h2>
+    <div *ngFor="let customer of customers" class="customer-card">
+      <p><strong>ID:</strong> {{ customer.customerId }}</p>
+      <p><strong>Name:</strong> {{ customer.name }}</p>
+      <p><strong>Email:</strong> {{ customer.email }}</p>
+      <p><strong>Username:</strong> {{ customer.username }}</p>
+      <p><strong>Role:</strong> {{ customer.role }}</p>
+    </div>
+  </div>
+  
+  <ng-template #noCustomers>
+    <p>No customers available.</p>
+  </ng-template>

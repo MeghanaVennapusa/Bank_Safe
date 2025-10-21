@@ -1,0 +1,115 @@
+POST https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customer/register
+Content-Type: application/json
+//Authorization: Basic base64(Megha:meghs@127)
+
+{
+  //"customerId": "123",
+  "name": "Meghana",
+  "email": "vmr@gmail.com",
+  "username": "Manasa",
+  "password": "meghana@127",
+  "role": "USER"
+}
+###
+POST https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customer/register
+Content-Type: application/json
+//Authorization: Basic base64(Megha:meghs@127)
+
+{
+  //"customerId": "123",
+  "name": "Manasa",
+  "email": "vmr2@gmail.com",
+  "username": "Manasaaa",
+  "password": "manasa@127",
+  "role": "ADMIN"
+}
+
+###
+POST https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/customer/login
+Content-Type: application/json
+//Authorization: Basic base64(Megha:meghs@127)
+
+{
+  //"customerId": "123",
+  "username": "Manasaaa",
+  "password": "manasa@127"
+}
+
+#eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDg4MjkyNiwiZXhwIjoxNzYyMDg0NDk2fQ.G9b_qm5wCX4rJIoGbOAClnSyTLUc2juZvQecGLlLEOs
+###
+
+POST https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/customers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDkwMTM4NSwiZXhwIjoxNzYyMTAyOTU1fQ.FspBAIpW8a5llY9Rpj4TEbhhCgcKz7dSn_YsBBoWvvo
+
+{
+  "name": "Customer4",
+  "email": "customer4@gmail.com",
+    "username": "customer4un",
+    "password": "customer4@pw",
+    "role": "USER"
+}
+###
+
+POST https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/customer/login
+Content-Type: application/json
+//Authorization: Basic base64(Megha:meghs@127)
+
+{
+  //"customerId": "123",
+  "username": "Manasa",
+  "password": "meghana@127"
+}
+###
+
+POST https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA4ODMxMTEsImV4cCI6MTc2MjA4NDY4MX0.XVWEGb92xBSgtPEmkHfYV98XN84R4YswAWoYSxFnLUo
+
+{
+  "name": "Customer1",
+  "email": "customer1@gmail.com",
+    "username": "customer1un",
+    "password": "customer1@pw",
+    "role": "USER"
+}
+###
+
+POST https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDg4MjkyNiwiZXhwIjoxNzYyMDg0NDk2fQ.G9b_qm5wCX4rJIoGbOAClnSyTLUc2juZvQecGLlLEOs
+
+{
+  "name": "Customer2",
+  "email": "customer2@gmail.com",
+    "username": "customerun",
+    "password": "customer2@pw",
+    "role": "USER"
+}
+###
+GET https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA4ODMxMTEsImV4cCI6MTc2MjA4NDY4MX0.XVWEGb92xBSgtPEmkHfYV98XN84R4YswAWoYSxFnLUo
+
+###
+GET https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDg4MjkyNiwiZXhwIjoxNzYyMDg0NDk2fQ.G9b_qm5wCX4rJIoGbOAClnSyTLUc2juZvQecGLlLEOs
+
+###
+
+PUT https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA4ODMxMTEsImV4cCI6MTc2MjA4NDY4MX0.XVWEGb92xBSgtPEmkHfYV98XN84R4YswAWoYSxFnLUo
+
+{
+  "name": "Customer1updated",
+  "email": "customer1@gmailll.com",
+    "username": "customer1un",
+    "password": "customer1@pw",
+    "role": "USER"
+}
+
+###
+DELETE https://ec2-13-232-225-61.projects.wecreateproblems.com/proxy/5000/customers/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA4ODMxMTEsImV4cCI6MTc2MjA4NDY4MX0.XVWEGb92xBSgtPEmkHfYV98XN84R4YswAWoYSxFnLUo
+

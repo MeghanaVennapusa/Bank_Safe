@@ -1,0 +1,46 @@
+POST https://ec2-35-154-153-30.projects.wecreateproblems.com/proxy/5000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDg5NzIxNiwiZXhwIjoxNzYyMDk4Nzg2fQ.Nl3u35CA8FJ3_4vcHsnlBp8NpjpTCYlP1_8YSM3EFlM
+
+{
+"balance": 20000,
+"customer": {
+     "customerId": 123
+    }
+
+}
+###
+POST https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA5MDI2MTIsImV4cCI6MTc2MjEwNDE4Mn0.k_vjrGyT1V00I2IX_IFdZ0FpQvTt14vV_7_omTRurR4
+
+{
+"balance": 80000,
+"customer": {
+     "customerId": 9
+    }
+
+}
+
+###
+GET https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2FhYSIsImlhdCI6MTc2MDkwMTM4NSwiZXhwIjoxNzYyMTAyOTU1fQ.FspBAIpW8a5llY9Rpj4TEbhhCgcKz7dSn_YsBBoWvvo
+
+###
+PUT https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/accounts/10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA5MDI2MTIsImV4cCI6MTc2MjEwNDE4Mn0.k_vjrGyT1V00I2IX_IFdZ0FpQvTt14vV_7_omTRurR4
+
+    {
+"balance": 70000,
+"customer": {
+     "customerId": 9
+    }
+}
+###
+
+DELETE https://ec2-15-206-167-141.projects.wecreateproblems.com/proxy/5000/accounts/10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYW5hc2EiLCJpYXQiOjE3NjA5MDI2MTIsImV4cCI6MTc2MjEwNDE4Mn0.k_vjrGyT1V00I2IX_IFdZ0FpQvTt14vV_7_omTRurR4
+
